@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 8 — Speaking with Native Speakers (High Stakes) | Speak English Without the Anxiety</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#FFFDF7;--bg-card:#FFFDF7;--ink:#141414;--ink-soft:#4d493d;--teal:#2C8226;--teal-deep:#141414;--amber:#F2782F;--amber-soft:#F6D716;--coral:#F2782F;--coral-soft:#F6D716;--line:#D4D4CE;--radius:12px;--green:#3CAE33;--green-dark:#2C8226;--green-text:#22671D;--yellow:#F6D716;--orange:#F2782F;--orange-text:#B4470C;--white:#FFFDF7;--cream:#FFFDF7;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .eyebrow{font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-text);font-weight:500;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;margin:0;color:var(--ink);}
+  h1{font-size:clamp(28px,5vw,44px);line-height:1.12;font-weight:600;}
+  h2{font-size:26px;margin-bottom:6px;}
+  p{margin:0 0 16px;color:var(--ink-soft);}
+  section{padding:44px 0;border-top:1px solid var(--line);}
+  .hero{padding:72px 0 48px;border-top:none;}
+  .story{background:var(--bg-card);border-radius:var(--radius);padding:32px;margin-top:18px;border-left:3px solid var(--coral);}
+  .story p{color:var(--ink);}
+  .story p:last-child{margin-bottom:0;}
+  .story .who{font-family:'Archivo',sans-serif;font-size:12px;color:var(--orange-text);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+  .checklist{list-style:none;padding:0;margin:16px 0 0;}
+  .checklist li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-top:1px solid var(--line);}
+  .checklist li:first-child{border-top:none;}
+  .checklist input[type=checkbox]{appearance:none;width:20px;height:20px;flex-shrink:0;margin-top:2px;border:2px solid var(--ink);border-radius:5px;cursor:pointer;position:relative;}
+  .checklist input[type=checkbox]:checked{background:var(--teal);}
+  .checklist input[type=checkbox]:checked::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid var(--white);border-width:0 2px 2px 0;transform:rotate(40deg);}
+  .checklist label{font-size:14.5px;color:var(--ink);}
+  .q-block{margin-top:20px;}
+  .q{margin-bottom:20px;}
+  .q label{display:block;font-size:15px;color:var(--ink);margin-bottom:8px;font-weight:500;}
+  .q textarea{width:100%;min-height:64px;border:2.5px solid var(--ink);border-radius:10px;padding:12px 14px;font-family:'Archivo',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-card);resize:vertical;}
+  .q textarea:focus{outline:2px solid var(--amber);outline-offset:1px;}
+  .progress-bar{position:sticky;top:0;height:4px;background:var(--line);z-index:10;}
+  .progress-fill{height:100%;background:var(--amber);width:0%;transition:width .1s linear;}
+  footer{padding:40px 0 60px;text-align:center;}
+  footer p{font-size:13px;color:var(--ink-soft);}
+  .chapter-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid var(--line);font-family:'Archivo',sans-serif;font-size:12px;flex-wrap:wrap;gap:10px;}
+  .chapter-nav a{color:var(--green-text);text-decoration:none;}
+  .chapter-nav a:hover{text-decoration:underline;}
+  .chapter-nav .index-link{color:var(--ink-soft);}
+
+  /* ---- SIGNATURE: PREPARATION STYLE QUIZ ---- */
+  .quiz-card{background:var(--bg-card);border:2.5px solid var(--ink);border-radius:var(--radius);padding:24px;margin-top:16px;}
+  .quiz-card p.prompt{color:var(--ink);font-size:14.5px;margin-bottom:14px;}
+  .quiz-opts{display:grid;gap:8px;}
+  .quiz-opts button{
+    font-family:'Archivo',sans-serif;font-size:13.5px;text-align:left;
+    padding:12px 14px;border-radius:8px;border:2.5px solid var(--ink);background:var(--bg);color:var(--ink);cursor:pointer;
+  }
+  .quiz-opts button b{color:var(--green-text);margin-right:6px;}
+  .quiz-opts button:hover{border-color:var(--green-text);}
+  .quiz-opts button.sel{background:var(--teal);border-color:var(--green-text);color:var(--white);}
+  .quiz-opts button.sel b{color:var(--white);}
+  .quiz-result{margin-top:16px;padding:14px 16px;border-radius:10px;background:var(--amber-soft);color:var(--ink);font-size:13.5px;display:none;}
+  .quiz-result.show{display:block;}
+
+  /* ---- PERFORMANCE PLAN STEPPER ---- */
+  .break-card{background:var(--bg-card);border:2.5px solid var(--ink);border-radius:var(--radius);padding:26px;margin-top:16px;}
+  .break-dots{display:flex;gap:8px;margin-bottom:16px;}
+  .break-dots span{width:8px;height:8px;border-radius:50%;background:var(--line);}
+  .break-dots span.active{background:var(--teal);}
+  .break-stage{min-height:110px;}
+  .break-eyebrow{font-family:'Archivo',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--orange-text);margin-bottom:8px;}
+  .break-line{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);line-height:1.4;}
+  .break-hint{font-size:13px;color:var(--ink-soft);margin-top:10px;}
+  .break-btn{font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;background:var(--teal);color:var(--white);border:none;border-radius:999px;padding:11px 26px;cursor:pointer;margin-top:18px;}
+  .break-btn:hover{background:var(--teal-deep);}
+  .break-btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px;}
+
+  /* ---- MOCK PRACTICE WITH TIMER ---- */
+  .mock-card{background:var(--bg-card);border:2.5px solid var(--ink);border-radius:var(--radius);padding:26px;margin-top:16px;}
+  .mock-question{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);line-height:1.4;min-height:52px;}
+  .mock-timer-row{display:flex;align-items:center;gap:14px;margin-top:16px;}
+  .mock-clock{font-family:'Archivo',sans-serif;font-size:26px;color:var(--green-text);}
+  .mock-clock.warn{color:var(--orange-text);}
+  .mock-status{font-size:12px;color:var(--ink-soft);}
+  .mock-btns{display:flex;gap:10px;margin-top:16px;}
+  .mock-btn{font-family:'Archivo',sans-serif;font-weight:600;font-size:13.5px;border:none;border-radius:999px;padding:11px 22px;cursor:pointer;}
+  .mock-draw{background:var(--amber);color:var(--ink);}
+  .mock-draw:hover{background:#D9631A;}
+  .mock-start{background:var(--teal);color:var(--white);}
+  .mock-start:hover{background:var(--teal-deep);}
+  .mock-repair{margin-top:16px;padding:12px 14px;border-radius:8px;background:var(--amber-soft);color:var(--ink);font-size:13.5px;display:none;}
+  .mock-repair.show{display:block;}
+
+/* =====================================================================
+   ATT ENGLISH ACADEMY BRAND LAYER
+   Colours: green #3CAE33, yellow #F6D716, orange #F2782F, ink #141414.
+   Type: Anton (stamp headlines), Playfair Display (subheads), Archivo (body).
+   ===================================================================== */
+body{background:var(--white);color:var(--ink);font-family:'Archivo',sans-serif;}
+.wrap{max-width:820px;}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;}
+
+/* Header */
+header.site{background:var(--ink);padding:18px 0;}
+.hwrap{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:flex;align-items:center;color:var(--white);font-family:'Anton',sans-serif;font-size:20px;letter-spacing:.5px;text-decoration:none;text-transform:uppercase;}
+/* Logo placeholder: swap this span for <img class="logo-mark" src="att-logo.png" alt=""> */
+.logo-mark{height:2em;width:2em;display:inline-flex;align-items:center;justify-content:center;background:var(--yellow);color:var(--ink);margin-right:10px;line-height:1;}
+.site-link{color:var(--yellow);font-weight:700;font-size:14px;text-decoration:none;}
+.site-link:hover{text-decoration:underline;}
+
+/* Progress bar */
+.progress-bar{height:6px;background:var(--cream);border-bottom:2px solid var(--ink);}
+.progress-fill{background:var(--orange);}
+
+/* Hero band: full-width cream with a heavy ink rule, as on the landing pages */
+.hero-band{background:var(--green);border-bottom:6px solid var(--ink);}
+.hero{padding:52px 0 60px;border-top:none;}
+.hero-band + .wrap > section:first-child{border-top:none;}
+.hero-grid h1{font-size:clamp(2rem,4.4vw,3.1rem);}
+.ring-label{padding:0 50px;}
+section{padding:56px 0;}
+
+/* Stamp / cutout headline system */
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;color:var(--ink);}
+h1{font-size:clamp(2.2rem,5.4vw,3.7rem);line-height:1.05;margin-top:14px;}
+h1 span{font-family:'Playfair Display',serif;font-style:italic;text-transform:none;font-weight:600;letter-spacing:0;}
+h2{font-size:clamp(1.7rem,3.6vw,2.3rem);line-height:1.1;margin-bottom:10px;}
+h3{font-size:1.3rem;line-height:1.15;}
+.type-card h3,.tech-block h3{font-size:1.25rem;}
+.eyebrow{display:inline-block;background:var(--yellow);color:var(--ink);font-family:'Archivo',sans-serif;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;box-shadow:3px 3px 0 var(--ink);transform:rotate(-1deg);margin-bottom:10px;}
+.hero h1{margin-bottom:16px;}
+.hero p{font-size:17px;color:var(--ink);}
+.hero-band .flip-front{box-shadow:8px 8px 0 var(--ink);}
+.hero-copy p{color:var(--ink);}
+
+/* Cards */
+.timer-card,.phrase-card,.break-card,.sort-card,.check-card,.match-card,.diag-card,.dial-card,.inv-card,
+.quiz-card,.mock-card,.warn-card,.tier-card,.balance-card,.achieve-card,.ba-card,.tech-block,.ladder-detail{
+  background:var(--white);border-radius:12px;box-shadow:6px 6px 0 var(--green);
+}
+.hero-band .timer-card,.hero-band .break-card,.hero-band .sort-card,.hero-band .check-card,.hero-band .match-card,
+.hero-band .quiz-card,.hero-band .tier-card,.hero-band .achieve-card,.hero-band .ladder-detail{box-shadow:8px 8px 0 var(--ink);}
+.story{background:var(--white);border:2.5px solid var(--ink);border-radius:12px;box-shadow:6px 6px 0 var(--orange);padding:30px;}
+.story .who{color:var(--orange-text);}
+.type-card,.belief-card,.month-card,.ladder-note,.error-legend div,.ground-cell{
+  background:var(--white);border-radius:10px;box-shadow:4px 4px 0 var(--yellow);
+}
+.ground-cell{box-shadow:3px 3px 0 var(--yellow);}
+.ground-cell.done{box-shadow:3px 3px 0 var(--ink);}
+
+/* Numbers and big figures use Anton */
+.timer-clock,.mock-clock,.achieve-count,.ground-cell .n{font-family:'Anton',sans-serif;font-weight:400;}
+.timer-clock,.mock-clock{font-size:34px;color:var(--ink);}
+.timer-clock.warn,.mock-clock.warn{color:var(--orange-text);}
+.achieve-count{font-size:34px;color:var(--ink);}
+.ground-cell .n{color:var(--ink);}
+
+/* Phrases and prompts: Playfair */
+.break-line,.match-sentence,.flip-text,.sort-text,.tier-sentence,.mock-question,.phrase-list li,.deck-text,.ring-label{
+  font-family:'Playfair Display',serif;font-weight:600;
+}
+
+/* Small labels that used a monospace face */
+.break-eyebrow,.flip-eyebrow,.deck-eyebrow,.who,.detail-label,.match-label,.warn-cat,.month-num,.inv-row-head,
+.rung-level,.flip-next,.sort-next,.match-next,.tier-next,.tag-count,.deck-count,.dial-value,.balance-value,
+.balance-total,.ba-bar-label,.ba-gap,.inv-anx,.diag-cat-tag,.achieve-count span,.ground-cell .s,.ring-label span.count,.num{
+  font-weight:700;
+}
+.break-eyebrow,.flip-front .flip-eyebrow,.match-label,.warn-cat,.month-num,.detail-label{color:var(--orange-text);}
+
+/* Primary buttons: orange, ink border, hard shadow */
+.ring-btn,.break-btn,#timerStart,.diag-add,.inv-add,.mock-start,.achieve-row button{
+  background:var(--orange)!important;color:var(--ink)!important;
+}
+/* Secondary buttons: yellow */
+#timerSend,.deck-btn,.mock-draw{background:var(--yellow)!important;color:var(--ink)!important;}
+.ring-btn,.break-btn,#timerStart,#timerSend,.diag-add,.inv-add,.mock-start,.mock-draw,.mock-btn,.deck-btn,.achieve-row button{
+  font-family:'Anton',sans-serif!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.5px;
+  border:2px solid var(--ink)!important;border-radius:6px!important;box-shadow:4px 4px 0 var(--ink);font-size:15px!important;
+  transition:transform .08s, box-shadow .08s;
+}
+.ring-btn:hover,.break-btn:hover,#timerStart:hover,#timerSend:hover,.diag-add:not(:disabled):hover,.inv-add:hover,
+.mock-start:hover,.mock-draw:hover,.deck-btn:hover,.achieve-row button:hover{
+  transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);
+}
+.diag-add:disabled{background:var(--cream)!important;color:var(--ink-soft)!important;box-shadow:none;opacity:.6;cursor:not-allowed;}
+
+/* Option buttons: white/cream with ink borders, yellow on hover, ink when selected */
+.sort-btns button,.match-opts button,.tier-opts button,.check-toggle button,.diag-cats button,.quiz-opts button,
+.tag-grid button,.inv-toggle button,.phrase-tabs button{
+  border-width:2.5px;color:var(--ink);font-weight:700;
+}
+.sort-btns button:hover,.match-opts button:hover,.tier-opts button:hover,.check-toggle button:hover,.diag-cats button:hover,
+.quiz-opts button:hover,.tag-grid button:hover,.inv-toggle button:hover,.phrase-tabs button:hover{
+  background:var(--yellow);border-color:var(--ink);
+}
+button.sel,button.sel:hover,.sort-btns button.sel,.check-toggle button.sel,.diag-cats button.sel,.quiz-opts button.sel,
+.tag-grid button.sel,.inv-toggle button.sel,.phrase-tabs button.sel{
+  background:var(--ink)!important;border-color:var(--ink)!important;color:var(--white)!important;
+}
+.quiz-opts button b{color:var(--orange-text);}
+.quiz-opts button.sel b{color:var(--yellow);}
+
+/* Feedback and result panels: solid yellow with ink border */
+.sort-feedback.show,.match-feedback.show,.tier-feedback.show,.check-result.show,.quiz-result.show,.diag-guidance.show,
+.warn-result.show,.mock-repair.show,.tag-insight.show,.dial-insight,.balance-insight{
+  background:var(--yellow);color:var(--ink);border:2px solid var(--ink);border-radius:8px;font-weight:500;
+}
+
+/* Flip cards and deck */
+.flip-face{border:2.5px solid var(--ink);box-shadow:6px 6px 0 var(--yellow);}
+.flip-front{background:var(--white);}
+.flip-back{background:var(--green)!important;color:var(--ink)!important;box-shadow:6px 6px 0 var(--ink);}
+.flip-back .flip-eyebrow,.flip-back .flip-hint{color:var(--ink)!important;}
+.deck-card{background:var(--green)!important;color:var(--ink)!important;border:3px solid var(--ink)!important;box-shadow:6px 6px 0 var(--ink);}
+.deck-card .deck-eyebrow{color:var(--ink);}
+.deck-behind{border:2.5px solid var(--ink);}
+.deck-behind-1{background:var(--yellow);}
+.deck-behind-2{background:var(--orange);opacity:1;}
+
+/* Ladder */
+.rung{border-width:2.5px;border-radius:8px;}
+.rung:hover{background:var(--yellow);border-color:var(--ink);}
+.rung.active{background:var(--ink);border-color:var(--ink);}
+.rung.active .rung-text,.rung.active .rung-level{color:var(--white);}
+
+/* Grounding cells */
+.ground-cell.done{background:var(--ink);border-color:var(--ink);}
+.ground-cell.done .n,.ground-cell.done .s,.ground-cell.done .ground-input{color:var(--white);}
+.ground-cell.active-focus{border-color:var(--orange);}
+
+/* Breathing ring */
+#ringFill{stroke:var(--ink);stroke-width:3px;}
+#ring circle:first-child{stroke:var(--ink);stroke-width:2px;stroke-dasharray:3 7;}
+.ring-label{color:var(--ink);}
+
+/* Progress-type bars */
+.tag-progress-track,.ba-bar-track{background:var(--cream);border:2px solid var(--ink);}
+.tag-progress-fill{background:var(--orange);}
+.ba-bar-fill.then{background:var(--orange);}
+.ba-bar-fill.now{background:var(--green);}
+.ba-gap{color:var(--orange-text);}
+
+/* Checkboxes */
+.checklist input[type=checkbox],.warn-group input[type=checkbox]{border:2px solid var(--ink);border-radius:4px;background:var(--white);}
+.checklist input[type=checkbox]:checked,.warn-group input[type=checkbox]:checked{background:var(--green-dark);}
+.checklist label,.warn-group label{font-weight:500;}
+.break-dots span{border:2px solid var(--ink);background:var(--white);}
+.break-dots span.active{background:var(--orange);}
+
+/* Inputs */
+textarea,input[type=text]{color:var(--ink);}
+textarea:focus,input[type=text]:focus{outline:3px solid var(--orange);outline-offset:1px;}
+.q label{font-weight:700;}
+
+/* Chapter navigation */
+.chapter-nav{border-top:3px solid var(--ink);font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em;padding:28px 0;}
+.chapter-nav a{color:var(--ink);text-decoration:none;border-bottom:3px solid var(--yellow);}
+.chapter-nav a:hover{background:var(--yellow);text-decoration:none;}
+.chapter-nav .index-link{color:var(--ink-soft);}
+
+/* Footer */
+footer{background:var(--ink);padding:30px 0;text-align:center;}
+footer p{color:#bbb;font-size:13px;margin:0 auto;}
+
+@media (max-width:720px){
+  .hero{padding:40px 0 44px;}
+  section{padding:44px 0;}
+  .hwrap{padding:0 20px;}
+  .timer-card,.phrase-card,.break-card,.sort-card,.check-card,.match-card,.diag-card,.dial-card,.inv-card,.quiz-card,.mock-card,
+  .warn-card,.tier-card,.balance-card,.achieve-card,.ba-card,.tech-block{box-shadow:4px 4px 0 var(--green);}
+  .story{box-shadow:4px 4px 0 var(--orange);}
+  .hero-band .timer-card,.hero-band .break-card,.hero-band .sort-card,.hero-band .check-card,.hero-band .match-card,
+  .hero-band .quiz-card,.hero-band .tier-card,.hero-band .achieve-card{box-shadow:5px 5px 0 var(--ink);}
+}
+/* ---------- GREEN EMPHASIS (books use green, orange, yellow, black and white) ---------- */
+header.site{border-bottom:4px solid var(--green);}
+footer{border-top:6px solid var(--green);}
+/* stamp labels rotate through the palette */
+section:nth-of-type(3n+2) .eyebrow{background:var(--green);}
+section:nth-of-type(3n) .eyebrow{background:var(--orange);}
+/* alternate card shadows: green, then yellow */
+section:nth-of-type(even) :is(.timer-card,.phrase-card,.break-card,.sort-card,.check-card,.match-card,.diag-card,.dial-card,.inv-card,.quiz-card,.mock-card,.warn-card,.tier-card,.balance-card,.achieve-card,.ba-card,.tech-block){box-shadow:6px 6px 0 var(--yellow);}
+/* key takeaways: solid green panel */
+#takeaways .checklist{background:var(--green);border:2.5px solid var(--ink);border-radius:12px;padding:6px 22px;box-shadow:6px 6px 0 var(--ink);}
+#takeaways .checklist li{border-top:2px solid rgba(20,20,20,.25);}
+#takeaways .checklist li:first-child{border-top:none;}
+#takeaways .checklist label{color:var(--ink);font-weight:600;}
+#takeaways .checklist input[type=checkbox]:checked{background:var(--ink);}
+/* completed / selected states use green */
+.ground-cell.done{background:var(--green);border-color:var(--ink);}
+.ground-cell.done .n,.ground-cell.done .s,.ground-cell.done .ground-input{color:var(--ink);}
+.ground-cell.done .ground-input::placeholder{color:var(--ink);opacity:.6;}
+.rung.active{background:var(--green);border-color:var(--ink);}
+.rung.active .rung-text,.rung.active .rung-level{color:var(--ink);}
+.break-dots span.active{background:var(--green);}
+.flip-back{background:var(--yellow)!important;}
+/* text that sits directly on the green hero band must be ink */
+.hero-band .ring-note,.hero-band .flip-hint,.hero-band .tier-legend,.hero-band h1 span{color:var(--ink)!important;}
+.hero-band .tier-legend{font-weight:600;}
+.hero-band .flip-controls .flip-next{color:var(--ink);font-weight:800;}
+.hero-band .ladder .rung-level{color:var(--orange-text);}
+@media (prefers-reduced-motion:reduce){ .ring-btn,.break-btn,#timerStart,#timerSend,.deck-btn{transition:none;} }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="hwrap">
+    <a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">A</span>ATT English Academy</a>
+    <a class="site-link" href="index.html">All lessons</a>
+  </div>
+</header>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="hero-band"><div class="wrap"><section class="hero">
+    <div class="eyebrow">Chapter 8 · Practice Strategies</div>
+    <h1>Speaking with native speakers<br><span style="font-size:0.7em;color:var(--ink-soft);">(high stakes)</span></h1>
+    <p>Before the chapter explains why certain preparation habits backfire, it's worth identifying your own pattern.</p>
+    <div class="quiz-card">
+      <p class="prompt">For your last genuinely high-stakes English situation — an interview, a major presentation, an important meeting — which of these was closest to true?</p>
+      <div class="quiz-opts" id="quizOpts">
+        <button data-v="A"><b>A</b>I wrote out full answers or scripts in advance and tried to remember them closely, even in moments that didn't go to plan.</button>
+        <button data-v="B"><b>B</b>I did little to no preparation, telling myself I'd just "wing it" on the day.</button>
+        <button data-v="C"><b>C</b>I prepared key points and ideas, practised expressing them a few different ways, and accepted I'd need to adapt.</button>
+        <button data-v="D"><b>D</b>I prepared so much, for so long, that I felt mentally exhausted before the event even started.</button>
+      </div>
+      <div class="quiz-result" id="quizResult"></div>
+    </div>
+  </section></div></div>
+
+<div class="wrap">
+
+  <section id="story">
+    <div class="eyebrow">A familiar scene</div>
+    <h2>Marcus's story</h2>
+    <div class="story">
+      <p class="who">Interview one: memorised. Interview two: prepared.</p>
+      <p>Marcus wrote detailed answers to every possible question and rehearsed until they were word-perfect. In the real interview, a follow-up question interrupted his script — his mind blanked. He didn't get the job.</p>
+      <p>Three months later, for a second opportunity, he prepared key themes rather than exact answers, and his nervous system alongside his content. When he stumbled, he repaired naturally and continued. He got the job. Flexible readiness beats memorisation that breaks under pressure.</p>
+    </div>
+  </section>
+
+  <section id="performance">
+    <div class="eyebrow">Part 4 · Try it</div>
+    <h2>Your high-stakes performance plan</h2>
+    <p>What determines whether a difficult moment becomes a catastrophe or a minor blip is usually what you do just before and just after it — not the moment itself. Step through each phase.</p>
+    <div class="break-card">
+      <div class="break-dots" id="perfDots"><span class="active"></span><span></span><span></span><span></span></div>
+      <div class="break-stage">
+        <div class="break-eyebrow" id="perfEyebrow">The hour before</div>
+        <div class="break-line" id="perfLine">Avoid cramming. Move your body if you can.</div>
+        <p class="break-hint" id="perfHint">Practise the physiological sigh, and remind yourself of your purpose for being there.</p>
+      </div>
+      <button class="break-btn" id="perfBtn">Next</button>
+    </div>
+  </section>
+
+  <section id="mock">
+    <div class="eyebrow">Part 5 · Try it</div>
+    <h2>Mock high-stakes practice</h2>
+    <p>Draw a question you might realistically face, then respond out loud within the time limit — the same way you would in the real thing. The goal isn't a polished answer. It's practising what to do when a question doesn't go to script.</p>
+    <div class="mock-card">
+      <div class="mock-question" id="mockQuestion">Draw a question to begin</div>
+      <div class="mock-timer-row">
+        <span class="mock-clock" id="mockClock">01:00</span>
+        <span class="mock-status" id="mockStatus">Not started</span>
+      </div>
+      <div class="mock-btns">
+        <button class="mock-btn mock-draw" id="mockDraw">Draw a question</button>
+        <button class="mock-btn mock-start" id="mockStart" style="display:none;">Start 60-second timer</button>
+      </div>
+      <p class="mock-repair" id="mockRepair"></p>
+    </div>
+  </section>
+
+  <section id="reflect">
+    <div class="eyebrow">Reflection</div>
+    <h2>Before you move on</h2>
+    <div class="q-block">
+      <div class="q"><label for="q1">What types of high-stakes situations create the most anxiety for you?</label><textarea id="q1" placeholder="Write here…"></textarea></div>
+      <div class="q"><label for="q2">Looking at content preparation versus emotional management preparation, which do you usually focus on more?</label><textarea id="q2" placeholder="Write here…"></textarea></div>
+      <div class="q"><label for="q3">What recovery strategy will be most helpful for you after a difficult moment?</label><textarea id="q3" placeholder="Write here…"></textarea></div>
+    </div>
+  </section>
+
+  <section id="takeaways">
+    <div class="eyebrow">Key takeaways</div>
+    <h2>What to remember</h2>
+    <ul class="checklist" id="checklist">
+      <li><input type="checkbox" id="k1"><label for="k1">Over-preparation often increases anxiety rather than reducing it.</label></li>
+      <li><input type="checkbox" id="k2"><label for="k2">Prepare ideas and structures, not exact wording — beyond your opening and closing.</label></li>
+      <li><input type="checkbox" id="k3"><label for="k3">Effective preparation balances content, delivery, and emotional management.</label></li>
+      <li><input type="checkbox" id="k4"><label for="k4">Recovery strategies for difficult moments matter as much as strategies for preventing them.</label></li>
+    </ul>
+  </section>
+
+  <nav class="chapter-nav">
+    <a href="chapter-7-lesson.html">← Native speakers, low stakes</a>
+    <a href="index.html" class="index-link">All chapters</a>
+    <a href="chapter-9-lesson.html">Written communication confidence →</a>
+  </nav>
+</div>
+
+<footer><div class="wrap">
+    <p>Speak English Without the Anxiety — Chapter 8 of 12.</p>
+  </div></footer>
+
+<script>
+const fill = document.getElementById('progressFill');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  fill.style.width = pct + '%';
+});
+
+const feedback = {
+  A: 'You answered A. The section on over-preparation just below will likely be the most useful part of this chapter for you — memorised scripts tend to break the moment reality deviates from them.',
+  B: 'You answered B. Focus on the preparation frameworks — a little structure (key points, not scripts) will serve you better than "winging it."',
+  C: 'You answered C. You\'re already close to the approach this chapter recommends. Read on for how to refine it further.',
+  D: 'You answered D. Like A, the section on over-preparation just below will likely be the most useful part of this chapter for you — exhaustion before the event is a sign preparation has tipped past its usefulness.'
+};
+document.querySelectorAll('#quizOpts button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#quizOpts button').forEach(b => b.classList.remove('sel'));
+    btn.classList.add('sel');
+    const result = document.getElementById('quizResult');
+    result.textContent = feedback[btn.dataset.v];
+    result.classList.add('show');
+  });
+});
+
+// Performance plan stepper
+const perfSteps = [
+  {eb:'The hour before', line:'Avoid cramming. Move your body if you can.', hint:'Practise the physiological sigh, and remind yourself of your purpose for being there.'},
+  {eb:'The opening moments', line:'Expect nervousness. Use your prepared opening.', hint:'Focus on communicating, not on monitoring your English as you speak.'},
+  {eb:'During the interaction', line:'Breathe. Pause when you need to.', hint:'If you make a mistake, repair it briefly and continue. If you don\'t understand, ask for clarification immediately.'},
+  {eb:'Handling difficult moments', line:'Your response matters more than avoiding the moment.', hint:'Graceful recovery demonstrates resilience and professionalism — often more than a flawless run would have.'}
+];
+let perfIdx = 0;
+const perfEyebrow = document.getElementById('perfEyebrow');
+const perfLine = document.getElementById('perfLine');
+const perfHint = document.getElementById('perfHint');
+const perfBtn = document.getElementById('perfBtn');
+const perfDots = document.querySelectorAll('#perfDots span');
+function renderPerf(){
+  perfEyebrow.textContent = perfSteps[perfIdx].eb;
+  perfLine.textContent = perfSteps[perfIdx].line;
+  perfHint.textContent = perfSteps[perfIdx].hint;
+  perfDots.forEach((d,i) => d.classList.toggle('active', i === perfIdx));
+  perfBtn.textContent = perfIdx === perfSteps.length - 1 ? 'Start again' : 'Next';
+}
+perfBtn.addEventListener('click', () => {
+  perfIdx = (perfIdx + 1) % perfSteps.length;
+  renderPerf();
+});
+
+// Mock high-stakes practice with timer
+const mockQuestions = [
+  'Walk me through a time you disagreed with a colleague. How did you handle it?',
+  'Why should we choose you over other candidates for this role?',
+  'Tell me about a project that didn\'t go as planned, and what you did next.',
+  'How would you explain this idea to someone with no background in the topic?',
+  'What questions do you have for us?',
+  'Describe a situation where you had to adapt quickly to unexpected change.',
+  'What would your previous manager say is your biggest area for growth?',
+  'Can you give a specific example of when you showed leadership?'
+];
+let mockDrawn = [];
+let mockSeconds = 60;
+let mockTimerId = null;
+const mockQuestionEl = document.getElementById('mockQuestion');
+const mockClockEl = document.getElementById('mockClock');
+const mockStatusEl = document.getElementById('mockStatus');
+const mockDrawBtn = document.getElementById('mockDraw');
+const mockStartBtn = document.getElementById('mockStart');
+const mockRepairEl = document.getElementById('mockRepair');
+
+document.getElementById('mockDraw').addEventListener('click', () => {
+  clearInterval(mockTimerId);
+  if(mockDrawn.length === mockQuestions.length) mockDrawn = [];
+  let pool = mockQuestions.map((_, i) => i).filter(i => !mockDrawn.includes(i));
+  const pick = pool[Math.floor(Math.random() * pool.length)];
+  mockDrawn.push(pick);
+  mockQuestionEl.textContent = mockQuestions[pick];
+  mockSeconds = 60;
+  mockClockEl.textContent = '01:00';
+  mockClockEl.classList.remove('warn');
+  mockStatusEl.textContent = 'Ready when you are';
+  mockStartBtn.style.display = 'inline-block';
+  mockDrawBtn.textContent = 'Draw a different question';
+  mockRepairEl.classList.remove('show');
+});
+
+mockStartBtn.addEventListener('click', () => {
+  mockStatusEl.textContent = 'Speaking out loud, now';
+  mockStartBtn.disabled = true;
+  mockTimerId = setInterval(() => {
+    mockSeconds--;
+    const m = String(Math.floor(mockSeconds / 60)).padStart(2,'0');
+    const s = String(mockSeconds % 60).padStart(2,'0');
+    mockClockEl.textContent = m + ':' + s;
+    if(mockSeconds <= 15) mockClockEl.classList.add('warn');
+    if(mockSeconds <= 0){
+      clearInterval(mockTimerId);
+      mockStatusEl.textContent = 'Time\'s up';
+      mockStartBtn.disabled = false;
+      mockStartBtn.style.display = 'none';
+      mockRepairEl.textContent = 'If that felt rough in places — good, that was the point. In the real thing: breathe, pause if you need to, repair briefly if you stumble, and keep going. Recovery matters more than avoiding the wobble.';
+      mockRepairEl.classList.add('show');
+    }
+  }, 1000);
+});
+</script>
+
+</body>
+</html>
